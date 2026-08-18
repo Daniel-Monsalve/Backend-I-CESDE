@@ -8,7 +8,6 @@ public class Enrollment {
     private int courseId;
     private int studentId;
     private String status;
-
     private String createAt;
 
 
