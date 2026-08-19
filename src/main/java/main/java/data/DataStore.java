@@ -23,6 +23,7 @@ public class DataStore {
     // ESTUDIANTES
     // ==========================================
 
+    //CREATE
     public void addStudent(Students student) {
         students.add(student);
     }
@@ -39,18 +40,20 @@ public class DataStore {
         }
         return null;
     }
-
+    //UPDATE
     public void updateStudent(int id, Students updatedStudent) {
         Students existingStudent = getStudent(id);
         if (existingStudent != null) {
-            existingStudent.setName(updatedStudent.getName());
+            existingStudent.setFirstName(updatedStudent.getFirstName());
+            existingStudent.setLastName(updatedStudent.getLastName());
             existingStudent.setEmail(updatedStudent.getEmail());
+            existingStudent.setPhone(updatedStudent.getPhone());
             System.out.println("Estudiante actualizado correctamente.");
         } else {
             System.out.println("No se encontró el estudiante con ID: " + id);
         }
     }
-
+    //DELETE
     public void removeStudents(int id) {
         Students student = getStudent(id);
         if (student != null) {
